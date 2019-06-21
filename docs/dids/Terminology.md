@@ -5,7 +5,7 @@
 
 ### DID - Decentralized Identifier 分散标识符
 
-全局唯一标识符，不需要集中注册机构，因为它是使用分布式分类帐技术或其他形式的分散式网络注册的。DID的通用格式在本规范中定义。在DID方法规范中定义了 特定的DID方案。
+全球唯一标识符，不需要集中注册机构，因为它是使用[分布式分类帐技术](/dids/Terminology.html#distributed-ledger-aka-dlt-分布式分类帐（又名dlt）)或其他形式的分散式网络注册的。DID的通用格式在本规范中定义。在[DID method](/dids/Terminology.html#did-method)规范中定义了 特定的DID scheme。
 
 ### Decentralized Identity Management 分散身份管理
 
@@ -13,13 +13,13 @@
 
 ### DIR - Decentralized Identifier Registry 分散标识符登记处
 
-一个系统执行角色，用于处理[分散标识符]()的创建，验证，更新和停用。DIR是一种可验证数据注册表（参见[ VC-DATA-MODEL ]）。
+一个系统执行角色，用于处理[分散标识符]()的创建，验证，更新和停用。DIR是一种可验证数据注册表（参见[VC-DATA-MODEL](/dids/References.html#vc-data-model)）。
 
-### DID Document
+### DID Document DID文档
 
 描述DID主题的一组数据 ，包括DID主题可用于验证自身并证明其与DID关联的机制，如公钥和假名生物识别。DID文档还可能包含 描述主题的其他 属性或 声明。这些文档是基于图形的数据结构，通常使用[ JSON-LD ]表示，但可以使用其他兼容的基于图形的数据格式表示。
 
-### DID Fragment
+### DID Fragment 
 
 所述一个的部分DID URL跟随第一散列符号字符（#）。DID片段使用与URI片段相同的语法。见章节[§ 4.7 片段]() 。
 
@@ -40,7 +40,7 @@ DID URL的第一个问号字符（?）后面 的部分。DID路径使用相同�
 [DID](#did-decentralized-identifier-分散标识符)加上可选的[DID Path](#did-path)，可选?字符后跟[DID query](#did-query)，可选#字符后跟[DID fragment](#did-fragment)。
 ### DID Scheme
 
-分散标识符 的正式语法。通用DID方案在本说明书中定义。单独的DID方法规范定义了与该特定DID方法一起使用的特定DID方案。
+分散标识符 的正式语法。通用DID方案在本说明书中定义。单独的[DID method](/dids/Terminology.html#did-method)规范定义了与该特定[DID method](/dids/Terminology.html#did-method)一起使用的特定DID方案。
 
 ### Distributed Ledger (aka DLT)  分布式分类帐（又名DLT）
 

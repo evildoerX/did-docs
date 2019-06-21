@@ -27,16 +27,16 @@ param-char         = ALPHA / DIGIT / "." / "-" / "_" / ":" /
                      pct-encoded
 ```
 ::: danger
-语法目前允许一个为空method-specific-id，例如did:example:将是一个有效的DID，可以识别DID方法本身
+语法目前允许一个为空method-specific-id，例如did:example:将是一个有效的DID，可以识别[DID method](/dids/Terminology.html#did-method)本身
 :::
 
 ## 4.2 Method-Specific Syntax 特定于方法的语法
-DID方法规范必须通过定义自己的method-name和自己的method-specific-id语法来进一步限制泛型DID语法。见章节[§ 7。 DID方法]() 。
+[DID method](/dids/Terminology.html#did-method)规范必须通过定义自己的method-name和自己的method-specific-id语法来进一步限制泛型DID语法。见章节[§ 7。 DID方法]() 。
 
 ## 4.3 Generic DID Parameter Names 通用DID参数名称
 DID URL语法支持基于矩阵参数语法（[MATRIX-URIS]()）的参数的简单通用格式。上面的ABNF没有指定任何参数名称（param-name规则）。
 
-一些通用DID参数名称（例如，用于服务选择）完全独立于任何特定DID方法，并且必须始终以相同方式对所有DIDs起作用。其他（例如，用于版本控制）可能由某些DID方法支持。但必须在那些支持它们的DID方法上统一运行
+一些通用DID参数名称（例如，用于服务选择）完全独立于任何特定[DID method](/dids/Terminology.html#did-method)，并且必须始终以相同方式对所有DIDs起作用。其他（例如，用于版本控制）可能由某些DID方法支持。但必须在那些支持它们的DID方法上统一运行
 
 第4.4节“特定方法的DID参数名称”([§ 4.4 Method-Specific DID Parameter Names .]())中介绍了完全特定于方法的参数名称。
 
@@ -50,7 +50,7 @@ DID决议(DID Resolution)中规范指定了这些参数的确切处理规则
 :::
 
 ## 4.4 Method-Specific DID Parameter Names -  Method-Specific DID 参数名称
-DID方法规范可以指定其他的method-specific参数名称。method-specific 的参数名称必须以``method-name``规则定义的方法名称作为前缀。
+[DID method](/dids/Terminology.html#did-method)规范可以指定其他的method-specific参数名称。method-specific 的参数名称必须以``method-name``规则定义的方法名称作为前缀。
 
 例如，如果方法``did:foo:``定义了参数栏，则参数名必须是``foo:bar``。使用此方法和``method-specific``的参数的DID URL示例将是：
 
@@ -60,7 +60,7 @@ DID方法规范可以指定其他的method-specific参数名称。method-specifi
 考虑使用``kebab-case``样式而不是冒号分隔符，例如``foo-bar``而不是``foo：bar``。
 :::
 
-由一个DID方法定义的``method-specific``的参数名称可以由其他DID方法使用。例如：
+由一个[DID method](/dids/Terminology.html#did-method)定义的``method-specific``的参数名称可以由其他DID方法使用。例如：
 
 ``did:example:21tDAKCERh95uGgKbJNHYp;foo:bar=low``
 
@@ -68,7 +68,7 @@ DID方法规范可以指定其他的method-specific参数名称。method-specifi
 
 ``did:example:21tDAKCERh95uGgKbJNHYp;service=agent;foo:bar=high``
 
-DID method namespaces和method-specific parameter namespaces都可以包括冒号，因此它们可以按照DID方法规范的定义进行分层分区。这是一个示例DID URL，它说明了：
+[DID method](/dids/Terminology.html#did-method) namespaces和method-specific parameter namespaces都可以包括冒号，因此它们可以按照[DID method](/dids/Terminology.html#did-method)规范的定义进行分层分区。这是一个示例DID URL，它说明了：
 
 ``did:foo:baz:21tDAKCERh95uGgKbJNHYp;foo:baz:hex=b612``
 
@@ -109,7 +109,7 @@ did:example:123456#oidc
 对于最广泛的互操作性，DID规范化应该尽可能简单和通用。因此：
 1. ``did：scheme name``必须是小写的。
 2. ``method name`` 必须是小写的。
-3. [第4.1节``Generic DID Syntax``(通用DID语法)]() 中的``method-specific-i``规则的区分大小写和规范化必须由管理DID方法规范定义。
+3. [第4.1节``Generic DID Syntax``(通用DID语法)]() 中的``method-specific-i``规则的区分大小写和规范化必须由管理[DID method](/dids/Terminology.html#did-method)规范定义。
 
 
 ## 4.9 Persistence
