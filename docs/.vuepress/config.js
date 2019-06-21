@@ -37,14 +37,14 @@ module.exports = ctx => ({
     // }) : null,
     locales: {
       '/': {
-        label: 'English',
-        selectText: 'Languages',
-        editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Updated',
+        label: '简体中文',
+        selectText: '选择语言',
+        editLinkText: '在 GitHub 上编辑此页',
+        lastUpdated: '上次更新',
         nav: require('./nav/en'),
         sidebar: {
           '/api/': getApiSidebar(),
-          '/guide/': getGuideSidebar('Guide', 'Advanced'),
+          '/guide/': getGuideSidebar('指南', '深入'),
           '/plugin/': getPluginSidebar('Plugin', 'Introduction', 'Official Plugins'),
           '/theme/': getThemeSidebar('Theme', 'Introduction'),
         }
@@ -104,6 +104,13 @@ function getGuideSidebar (groupA, groupB) {
       title: groupA,
       collapsable: false,
       children: [
+        'Guide',
+      ]
+    },
+    {
+      title: groupB,
+      collapsable: false,
+      children: [
         '',
         'Terminology',
         'DataModel',
@@ -118,16 +125,6 @@ function getGuideSidebar (groupA, groupB) {
         'Registries',
         'RealWorldExample',
         'References',
-      ]
-    },
-    {
-      title: groupB,
-      collapsable: false,
-      children: [
-        'frontmatter',
-        'permalinks',
-        'markdown-slot',
-        'global-computed'
       ]
     }
   ]

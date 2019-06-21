@@ -1,6 +1,6 @@
 module.exports = [
   {
-    text: 'Guide',
+    text: 'DIDs',
     link: '/guide/',
   },
   {
