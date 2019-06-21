@@ -36,4 +36,4 @@ DID method规范必须指定客户端如何更[Decentralized Identifier Registry
 
 由于没有分配或批准DID方法名称的中央权限，因此无法确定特定DID方法名称是否唯一。为了应对这一挑战，W3C凭证社区小组维护着一份已知DID方法名称及其相关规范的非权威列表（请参阅附录[§ A. Registries )]()）。
 
-[DID-METHOD-REGISTRY]是实现者在对新方法名称达成共识时使用的工具，以及为不同DID方法实现§8。DID解析器的软件开发人员的信息参考。[DID-METHOD-REGISTRY]不是DID方法的权威或正式列表。尽管如此，鼓励将DID方法名称添加到[DID-METHOD-REGISTRY]，以便其他实现者和社区成员可以查看现有DID方法的概述。包含的轻量级标准记录在[DID-METHOD-REGISTRY]中。
+[DID-METHOD-REGISTRY](/dids/References.html#did-method-registry)是实现者在对新方法名称达成共识时使用的工具，以及为不同DID方法实现§8。DID解析器的软件开发人员的信息参考。[DID-METHOD-REGISTRY](/dids/References.html#did-method-registry)不是DID方法的权威或正式列表。尽管如此，鼓励将DID方法名称添加到[DID-METHOD-REGISTRY](/dids/References.html#did-method-registry)，以便其他实现者和社区成员可以查看现有DID方法的概述。包含的轻量级标准记录在[DID-METHOD-REGISTRY](/dids/References.html#did-method-registry)中。

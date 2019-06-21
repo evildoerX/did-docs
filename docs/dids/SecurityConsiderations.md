@@ -17,12 +17,12 @@
 4. 本节必须为本规范第7节（DID操作）所要求的所有操作提供完整性保护和更新认证。
 5. 在DID方法利用对等计算资源（例如所有已知的DLT）的情况下，应该讨论这些资源的预期负担与拒绝服务有关。
 6. 必须讨论特定于方法的端点认证。其中DID方法使用具有不同网络拓扑的DLT，有时提供为“light node”或“ thin client ”,在减少所需计算资源的实现中，必须讨论可用于DID方法实现的拓扑的安全假设。
-7. DID方法必须讨论证明DID被唯一分配的策略机制。 DID符合[RFC8141]中定义的URN的功能定义 - 一个永久标识符，该标识符一次分配给资源并且从不重新分配。在安全上下文中，这尤其重要，因为DID可用于标识受特定授权权限集限制的特定方。
+7. DID方法必须讨论证明DID被唯一分配的策略机制。 DID符合[RFC8141](/dids/References.html#rfc8141)中定义的URN的功能定义 - 一个永久标识符，该标识符一次分配给资源并且从不重新分配。在安全上下文中，这尤其重要，因为DID可用于标识受特定授权权限集限制的特定方。
 8.引入新的身份验证服务端点类型的DID方法（[第5.6节服务端点](/guide/DIDDocuments.html#_5-6-service-endpoints)）应该考虑支持的身份验证协议的安全要求。
 
 ## 9.2 选择 DID Resolvers
 
-[DID-METHOD-REGISTRY]()是DID方法名称及其相应的DID方法规范的信息列表。实现者应该记住，没有中央权限来强制要求哪个DID方法规范必须与任何特定的DID方法名称一起使用，但是在选择[§8。DID Resolvers](/guide/Resolvers.html)实现时，可以使用[DID-METHOD-REGISTRY]做出明智的决定。
+[DID-METHOD-REGISTRY](/dids/References.html#did-method-registry)是DID方法名称及其相应的DID方法规范的信息列表。实现者应该记住，没有中央权限来强制要求哪个DID方法规范必须与任何特定(的DID方法名称一起使用，但是在选择[§8。DID Resolvers](/guide/Resolvers.html)实现时，可以使用[DID-METHOD-REGISTRY](/dids/References.html#did-method-registry))做出明智的决定。
 
 ## 9.3 绑定身份
 ### 9.3.1 证明控制DID和DID Document

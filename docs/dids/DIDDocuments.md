@@ -184,7 +184,7 @@ Authentication的规则是：
 2. service属性的值应该是服务端点的数组。
 3. 每个服务端点必须包含id，type和serviceEndpoint属性，并且可以包含其他属性。
 4. 服务端点协议应该应该以开放标准规范发布。
-5. serviceEndpoint属性的值必须是JSON-LD对象或符合[RFC3986]()的有效URI，并根据[RFC3986]()第6节中的规则以及其适用的URI scheme规范中的任何规范化规则进行规范化。
+5. serviceEndpoint属性的值必须是JSON-LD对象或符合[RFC3986](/dids/References.html#rfc3986)的有效URI，并根据[RFC3986](/dids/References.html#rfc3986)第6节中的规则以及其适用的URI scheme规范中的任何规范化规则进行规范化。
 
 例：
 

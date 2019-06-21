@@ -15,10 +15,10 @@ DID方法是在特定分布式分类帐或网络上创建，读取，更新和�
 
 本规范的第一个目的是在DID文档上定义通用DID方案和一组通用操作，这些操作可以为任何[ Decentralized Identifier Registry -分散标识符注册表](https://w3c-ccg.github.io/did-spec/#dfn-dir)实现。本规范的第二个目的是定义DID方法规范的一致性要求 - 一个单独的规范，它定义特定DID方案和特定分散标识符注册表的特定DID文档操作集 。
 ::: tip
-从概念上讲，此规范与DID方法规范的关系类似于IETF通用URI规范（[RFC3986]()）与特定URI方案（[IANA-URI-SCHEMES]()（例如http：和https： [RFC7230]()中指定的方案。它也类似于IETF通用URN规范（[RFC8141]()）和特定URN命名空间定义（如[RFC4122]()中定义的UUID URN命名空间）的关系。不同之处在于 除了定义特定的DID方案之外，DID方法规范还必须指定用于解析和停用DID以及在写入DID的网络上编写DID文档的方法。
+从概念上讲，此规范与DID方法规范的关系类似于IETF通用URI规范（[RFC3986](/dids/References.html#rfc3986)）与特定URI Scheme（[IANA-URI-SCHEMES](/dids/References.html#iana-uri-schemes)（例如http：和https： [RFC7230](/dids/References.html#rfc7230)中指定的方案。它也类似于IETF通用URN规范（[RFC8141](/dids/References.html#rfc8141)）和特定URN命名空间定义（如[RFC4122](/dids/References.html#rfc4122)中定义的UUID URN命名空间）的关系。不同之处在于 除了定义特定的DID方案之外，DID方法规范还必须指定用于解析和停用DID以及在写入DID的网络上编写DID文档的方法。
 :::
 
-有关DID方法及其相应规范的列表，请参阅DID方法注册表[DID-METHOD-REGISTRY]()
+有关DID方法及其相应规范的列表，请参阅DID方法注册表[DID-METHOD-REGISTRY](/dids/References.html#did-method-registry)
 
 ## 1.1  一个简单的例子
 >本节不具有规范性。
@@ -57,7 +57,7 @@ did:example:123456789abcdefghi
 ## 1.2 设计目标
 >本节不具有规范性。
 
-DID是大型系统的一个组成部分，例如可验证证书生态系统[VC-DATA-MODEL]()，它们推动了该规范的设计目标。本节总结了该规范的主要设计目标
+DID是大型系统的一个组成部分，例如可验证证书生态系统[VC-DATA-MODEL](https://w3c-ccg.github.io/did-spec/#bib-vc-data-model)，它们推动了该规范的设计目标。本节总结了该规范的主要设计目标
 
 | 目标        | 描述           |
 | ------------- |:-------------:|

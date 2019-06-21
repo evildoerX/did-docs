@@ -1,16 +1,16 @@
 # 4. Decentralized Identifiers (DIDs)
-全球唯一的分散标识符(decentralized identifier)的概念并不新鲜; 通用唯一标识符（UUID）最初是在20世纪80年代开发的，后来成为开放软件基金会分布式计算环境的标准功能 。通过使用生成具有足够熵的128位值的算法，UUID在没有集中式注册服务的情况下实现全局唯一性，以使碰撞的机会极小。UUID在[ RFC4122 ]() 中正式指定为特定类型的统一资源名称（URN）。
+全球唯一的分散标识符(decentralized identifier)的概念并不新鲜; 通用唯一标识符（UUID）最初是在20世纪80年代开发的，后来成为开放软件基金会分布式计算环境的标准功能 。通过使用生成具有足够熵的128位值的算法，UUID在没有集中式注册服务的情况下实现全局唯一性，以使碰撞的机会极小。UUID在[ RFC4122 ](/dids/References.html#rfc4122) 中正式指定为特定类型的统一资源名称（URN）。
 
 DID类似于UUID，除了：（a）像URL一样，它可以被解析或解引用到描述主体(subject)的标准资源（[DID Document]()- 参见章节[§ 5。 DID文档]() ），以及（b）与URL不同，DID文档通常包含能够验证DID subject的加密材料。
 
 
 ## 4.1 Generic DID Syntax
-通用[ DID scheme ]()是符合[ RFC3986 ]() 的URI scheme。DID scheme专门仅scheme和权威部件(uthority components)而言与DID URI-path-abempty， query和fragment组件是相同的，都是[RFC3986 ]定义的ABNF规则。
+通用[ DID scheme ]()是符合[RFC3986](/dids/References.html#rfc3986)的URI scheme。DID scheme专门仅scheme和权威部件(uthority components)而言与DID URI-path-abempty， query和fragment组件是相同的，都是[RFC3986](/dids/References.html#rfc3986)定义的ABNF规则。
 ::: tip
 术语DID仅指符合did下面ABNF中规则的URI 。DID始终标识DID subject。由did-url规则定义的术语DID URL是指URL以DID开头，后跟一个或多个附加组件的。DID URL始终标识要定位的资源。
 :::
 
-以下是使用[RFC5234]()中定义``ALPHA``和``DIGIT``的ABNF语法的规范 。此``ABNF``中未定义的所有其他规则名称在[ RFC3986 ]() 中定义。
+以下是使用[RFC5234]()中定义``ALPHA``和``DIGIT``的ABNF语法的规范 。此``ABNF``中未定义的所有其他规则名称在[RFC3986](/dids/References.html#rfc3986)中定义。
 
 ```json
 did                = "did:" method-name ":" method-specific-id
@@ -77,7 +77,7 @@ DID method namespaces和method-specific parameter namespaces都可以包括冒�
 :::
 
 ## 4.5 Path
-通用``DID path ``与U`` URI path ``相同，并且必须符合[RFC3986]中的``path-abempty````ABNF``规则。 ``DID path``应该用于解决通过`` DID service endpoint``可用的资源。请参见第5.6节[Service Endpoints]()。
+通用``DID path ``与U`` URI path ``相同，并且必须符合[RFC3986](/dids/References.html#rfc3986)中的``path-abempty````ABNF``规则。 ``DID path``应该用于解决通过`` DID service endpoint``可用的资源。请参见第5.6节[Service Endpoints]()。
 
 特定的``DID scheme``可以为`` DID paths``指定``ABNF``规则，这些规则比本节中的通用规则更具限制性。
 
@@ -86,7 +86,7 @@ did:example:123456/path
 :::
 
 ## 4.6 Query
-通用``DID query ``与``URI query``相同，并且必须符合[RFC3986]中的``query``ABNF规则。``DID query ``应该用于解决通过`` DID service endpoint``可用的资源。请参见第5.6节[Service Endpoints]()。
+通用``DID query ``与``URI query``相同，并且必须符合[RFC3986](/dids/References.html#rfc3986)中的``query``ABNF规则。``DID query ``应该用于解决通过`` DID service endpoint``可用的资源。请参见第5.6节[Service Endpoints]()。
 
 特定的``DID scheme``可以为``DID queries``指定ABNF规则，这些规则比本节中的通用规则更具限制性。
 
@@ -95,7 +95,7 @@ did:example:123456?query=true
 :::
 
 ## 4.7 Fragment
-通用``DID fragment ``与``URI fragment``相同，必须符合[RFC3986]中的片段ABNF规则。``DID fragment``必须仅用作``DID Document``中与方法无关的引用，以识别DID文档的组件（例如，唯一的密钥描述）。要解决此参考，包含`` DID fragment``的完整``DID URL``必须用作DID Document对象中目标组件的键值。
+通用``DID fragment ``与``URI fragment``相同，必须符合[RFC3986](/dids/References.html#rfc3986)中的片段ABNF规则。``DID fragment``必须仅用作``DID Document``中与方法无关的引用，以识别DID文档的组件（例如，唯一的密钥描述）。要解决此参考，包含`` DID fragment``的完整``DID URL``必须用作DID Document对象中目标组件的键值。
 
 特定的``DID scheme``可以为``DID fragments ``指定ABNF规则，这些规则比本节中的通用规则更具限制性。
 
