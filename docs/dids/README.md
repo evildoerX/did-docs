@@ -1,19 +1,19 @@
 # 1. 介绍
 >本节不具有规范性。
 
-传统的身份管理系统基于集中的权限，例如公司目录服务，证书颁发机构或域名注册。从加密信任验证的角度来看，这些集中式权限中的每一个都是其自己 的信任根。要使身份管理跨这些系统工作，需要实现联合身份管理。
+传统的[identity management-身份管理](https://en.wikipedia.org/wiki/Identity_management)系统基于集中的权限，例如[directory services-公司目录服务](https://en.wikipedia.org/wiki/Directory_service)，[certificate authorities-证书颁发机构](https://en.wikipedia.org/wiki/Certificate_authority)或[domain name registries-域名注册](https://en.wikipedia.org/wiki/Domain_name_registry)。从加密信任验证的角度来看，这些集中式权限中的每一个都是其自己 的[root of trust-信任根](https://en.wikipedia.org/wiki/Trust_anchor)。要使身份管理跨这些系统工作，需要实现[federated identity management-联合身份管理](https://en.wikipedia.org/wiki/Federated_identity)。
 
-分布式账本技术（DLT）的出现，有时也称为区块链技术，为完全分散的身份管理提供了机会。在分散的身份系统中，实体（在诸如但不限于人和组织的离散可识别单元的意义上）可以自由地使用任何共享的信任根。全球分布式分类账，分散式P2P网络或具有类似功能的其他系统，提供了管理信任根的方法，既没有集中权限也没有单点故障。结合使用，DLT和分散式身份系统使任何实体都能够在任意数量的独立信任根上创建和管理自己的标识符。
+分布式账本技术（DLT）的出现，有时也称为区块链技术，为完全[ decentralized identity management-分散的身份管理](https://w3c-ccg.github.io/did-spec/#dfn-decentralized-identity-management)提供了机会。在分散的身份系统中，实体（在诸如但不限于人和组织的离散可识别单元的意义上）可以自由地使用任何共享的信任根。全球分布式分类账，分散式P2P网络或具有类似功能的其他系统，提供了管理信任根的方法，既没有集中权限也没有单点故障。结合使用，DLT和分散式身份系统使任何实体都能够在任意数量的独立信任根上创建和管理自己的标识符。
 
-实体由分散标识符（DID）标识，并且可以通过证明（例如，数字签名，保护隐私的生物统计协议等）进行认证。DID指向DID文档。DID文档包含一组服务端点，用于与DID标识的实体（也称为DID主题）进行交互。遵循隐私设计的格言 ，任何实体可以根据需要拥有尽可能多的DID（以及相应的DID文档和服务端点），以尊重实体所需的身份，角色和背景分离。
+实体由分散标识符（DID）标识，并且可以通过证明（例如，数字签名，保护隐私的生物统计协议等）进行认证。DID指向DID文档。DID文档包含一组服务端点，用于与DID标识的实体（也称为DID主题）进行交互。遵循[Privacy by Design - 隐私设计](https://en.wikipedia.org/wiki/Privacy_by_design)的格言 ，任何实体可以根据需要拥有尽可能多的DID（以及相应的DID文档和服务端点），以尊重实体所需的身份，角色和背景分离。
 
 DID方法是在特定分布式分类帐或网络上创建，读取，更新和停用DID及其关联的DID文档的机制。DID方法使用单独的DID方法规范定义。
 
-此设计消除了对集中式注册表的依赖性以及密钥管理的集中式证书颁发机构 - 分层PKI（公钥基础结构）中的标准模式。由于DID驻留在分布式分类帐上，因此每个实体都可以充当其自己的根权限 - 称为 DPKI（分散式PKI）的体系结构。
+此设计消除了对集中式注册表的依赖性以及密钥管理的集中式证书颁发机构 - 分层[PKI (public key infrastructure - PKI（公钥基础结构）](https://en.wikipedia.org/wiki/Public_key_infrastructure)中的标准模式。由于DID驻留在分布式分类帐上，因此每个实体都可以充当其自己的根权限 - 称为 [DPKI (decentralized PKI) - DPKI（分散式PKI）](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust/blob/master/final-documents/dpki.pdf)的体系结构。
 
 注意，还可以为在联合或集中身份管理系统中注册的标识符开发DID方法。就他们而言，所有类型的标识符系统都可以添加对DID的支持。这在集中式，联合式和分散式标识符的世界之间建立了互操作性桥梁。
 
-本规范的第一个目的是在DID文档上定义通用DID方案和一组通用操作，这些操作可以为任何分散标识符注册表实现。本规范的第二个目的是定义DID方法规范的一致性要求 - 一个单独的规范，它定义特定DID方案和特定分散标识符注册表的特定DID文档操作集 。
+本规范的第一个目的是在DID文档上定义通用DID方案和一组通用操作，这些操作可以为任何[ Decentralized Identifier Registry -分散标识符注册表](https://w3c-ccg.github.io/did-spec/#dfn-dir)实现。本规范的第二个目的是定义DID方法规范的一致性要求 - 一个单独的规范，它定义特定DID方案和特定分散标识符注册表的特定DID文档操作集 。
 ::: tip
 从概念上讲，此规范与DID方法规范的关系类似于IETF通用URI规范（[RFC3986]()）与特定URI方案（[IANA-URI-SCHEMES]()（例如http：和https： [RFC7230]()中指定的方案。它也类似于IETF通用URN规范（[RFC8141]()）和特定URN命名空间定义（如[RFC4122]()中定义的UUID URN命名空间）的关系。不同之处在于 除了定义特定的DID方案之外，DID方法规范还必须指定用于解析和停用DID以及在写入DID的网络上编写DID文档的方法。
 :::

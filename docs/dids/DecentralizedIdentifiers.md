@@ -120,5 +120,5 @@ DID必须是持久的和不可变的，即一次绑定到subject并永远不会�
 为了避免这些问题，建议``DID method ``规范只产生绑定到强大的DID和``DID method ``，稳定分散标识注册(Decentralized Identifier Registries )管理机构随着时间的推移，对DID和``DID method ``的持久性做出最高水平的承诺。
 
 ::: tip
-虽然未包含在此版本中，但此规范的未来版本可能支持DID Document  的 equivID属性，以在多个分散标识符注册表上表示同一主题的DID之间建立可验证的等效关系。这种等价关系可以产生单个持久抽象DID的实际等价物。见未来工作（第§节） 11。 未来的工作 ）
+虽然未包含在此版本中，但此规范的未来版本可能支持DID Document  的 equivID属性，以在多个[ Decentralized Identifier Registry -分散标识符注册表](https://w3c-ccg.github.io/did-spec/#dfn-dir)上表示同一主题的DID之间建立可验证的等效关系。这种等价关系可以产生单个持久抽象DID的实际等价物。见未来工作（第§节） 11。 未来的工作 ）
 :::
