@@ -1,4 +1,4 @@
-# 7 DID Methods
+# 7. DID Methods
 ## 7.1 DID Method Schemes
 DID方法规范必须完全定义一个由一个方法名称标识的特定DID方案（[第4.1节 Generic DID Syntax](#_4-1-generic-did-syntax)中的``method-name``规则）。
 

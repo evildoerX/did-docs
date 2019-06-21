@@ -1,4 +1,4 @@
-# C. References
+# C. 参考
 ## C1. 规范性参考文献
 **[JSON-LD]**
 
