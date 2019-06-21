@@ -5,7 +5,7 @@
 
 分布式账本技术（DLT）的出现，有时也称为区块链技术，为完全[ decentralized identity management-分散的身份管理](https://w3c-ccg.github.io/did-spec/#dfn-decentralized-identity-management)提供了机会。在分散的身份系统中，实体（在诸如但不限于人和组织的离散可识别单元的意义上）可以自由地使用任何共享的信任根。全球分布式分类账，分散式P2P网络或具有类似功能的其他系统，提供了管理信任根的方法，既没有集中权限也没有单点故障。结合使用，DLT和分散式身份系统使任何实体都能够在任意数量的独立信任根上创建和管理自己的标识符。
 
-实体由分散标识符（DID）标识，并且可以通过证明（例如，数字签名，保护隐私的生物统计协议等）进行认证。DID指向DID文档。DID文档包含一组服务端点，用于与DID标识的实体（也称为DID主题）进行交互。遵循[Privacy by Design - 隐私设计](https://en.wikipedia.org/wiki/Privacy_by_design)的格言 ，任何实体可以根据需要拥有尽可能多的DID（以及相应的DID文档和服务端点），以尊重实体所需的身份，角色和背景分离。
+实体由分布式身份标识符（DID）标识，并且可以通过证明（例如，数字签名，保护隐私的生物统计协议等）进行认证。DID指向DID文档。DID文档包含一组服务端点，用于与DID标识的实体（也称为DID主题）进行交互。遵循[Privacy by Design - 隐私设计](https://en.wikipedia.org/wiki/Privacy_by_design)的格言 ，任何实体可以根据需要拥有尽可能多的DID（以及相应的DID文档和服务端点），以尊重实体所需的身份，角色和背景分离。
 
 DID方法是在特定分布式分类帐或网络上创建，读取，更新和停用DID及其关联的DID文档的机制。DID方法使用单独的DID方法规范定义。
 
@@ -13,7 +13,7 @@ DID方法是在特定分布式分类帐或网络上创建，读取，更新和�
 
 注意，还可以为在联合或集中身份管理系统中注册的标识符开发DID方法。就他们而言，所有类型的标识符系统都可以添加对DID的支持。这在集中式，联合式和分散式标识符的世界之间建立了互操作性桥梁。
 
-本规范的第一个目的是在DID文档上定义通用DID方案和一组通用操作，这些操作可以为任何[ Decentralized Identifier Registry -分散标识符注册表](https://w3c-ccg.github.io/did-spec/#dfn-dir)实现。本规范的第二个目的是定义DID方法规范的一致性要求 - 一个单独的规范，它定义特定DID方案和特定分散标识符注册表的特定DID文档操作集 。
+本规范的第一个目的是在DID文档上定义通用DID方案和一组通用操作，这些操作可以为任何[ Decentralized Identifier Registry -分布式身份标识符注册表](https://w3c-ccg.github.io/did-spec/#dfn-dir)实现。本规范的第二个目的是定义DID方法规范的一致性要求 - 一个单独的规范，它定义特定DID方案和特定分布式身份标识符注册表的特定DID文档操作集 。
 ::: tip
 从概念上讲，此规范与DID方法规范的关系类似于IETF通用URI规范（[RFC3986](/dids/References.html#rfc3986)）与特定URI Scheme（[IANA-URI-SCHEMES](/dids/References.html#iana-uri-schemes)（例如http：和https： [RFC7230](/dids/References.html#rfc7230)中指定的方案。它也类似于IETF通用URN规范（[RFC8141](/dids/References.html#rfc8141)）和特定URN命名空间定义（如[RFC4122](/dids/References.html#rfc4122)中定义的UUID URN命名空间）的关系。不同之处在于 除了定义特定的DID方案之外，DID方法规范还必须指定用于解析和停用DID以及在写入DID的网络上编写DID文档的方法。
 :::
@@ -28,7 +28,7 @@ DID是一个简单的文本字符串，由三部分组成：
 2. DID方法的标识符
 3. DID方法特定的标识符
 
-::: warning 示例1：分散标识符（DID）的简单示例
+::: warning 示例1：分布式身份标识符（DID）的简单示例
 did:example:123456789abcdefghi
 :::
 上面的DID解析为DID文档。 DID文档包含与DID相关联的信息，例如以加密方式验证控制DID的实体的方式，以及可用于与实体交互的服务。

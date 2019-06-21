@@ -25,7 +25,7 @@
 Copyright © 2019 the Contributors to the Decentralized Identifiers (DIDs) v0.13 Specification, published by the Credentials Community Group under the W3C Community Contributor License Agreement (CLA). A human-readable summary is available.
 版权所有©2019权力下放标识符（DID）v0.13规范的贡献者，由证书社区组根据W3C社区贡献者许可协议（CLA）发布。提供人类可读的摘要。
 ## 摘要
-分散标识符（DIDs）是用于可验证的“自我主权”数字身份的新型标识符。 DID完全在DID主题的控制之下，独立于任何集中注册表，身份提供者或证书颁发机构。 DID是将DID主题与可信任的交互方式相关联的URL。 DID解析为DID文档 - 描述如何使用该特定DID的简单文档。每个DID文档可能至少包含三个内容：证明目的，验证方法和服务端点。证明目的与验证方法相结合，以提供证明事物的机制。例如，DID文档可以指定可以使用特定验证方法（例如加密公钥或假名生物识别协议）来验证为验证目的而创建的证明。服务端点启用与DID控制器的可信交互。
+分布式身份标识符（DIDs）是用于可验证的“自我主权”数字身份的新型标识符。 DID完全在DID主题的控制之下，独立于任何集中注册表，身份提供者或证书颁发机构。 DID是将DID主题与可信任的交互方式相关联的URL。 DID解析为DID文档 - 描述如何使用该特定DID的简单文档。每个DID文档可能至少包含三个内容：证明目的，验证方法和服务端点。证明目的与验证方法相结合，以提供证明事物的机制。例如，DID文档可以指定可以使用特定验证方法（例如加密公钥或假名生物识别协议）来验证为验证目的而创建的证明。服务端点启用与DID控制器的可信交互。
 
 本文档指定了所有DIDs支持的通用数据模型，格式和操作。
 

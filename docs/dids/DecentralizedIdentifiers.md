@@ -1,5 +1,5 @@
 # 4. Decentralized Identifiers (DIDs)
-全球唯一的分散标识符(decentralized identifier)的概念并不新鲜; 通用唯一标识符（UUID）最初是在20世纪80年代开发的，后来成为开放软件基金会分布式计算环境的标准功能 。通过使用生成具有足够熵的128位值的算法，UUID在没有集中式注册服务的情况下实现全局唯一性，以使碰撞的机会极小。UUID在[ RFC4122 ](/dids/References.html#rfc4122) 中正式指定为特定类型的统一资源名称（URN）。
+全球唯一的分布式身份标识符(decentralized identifier)的概念并不新鲜; 通用唯一标识符（UUID）最初是在20世纪80年代开发的，后来成为开放软件基金会分布式计算环境的标准功能 。通过使用生成具有足够熵的128位值的算法，UUID在没有集中式注册服务的情况下实现全局唯一性，以使碰撞的机会极小。UUID在[ RFC4122 ](/dids/References.html#rfc4122) 中正式指定为特定类型的统一资源名称（URN）。
 
 DID类似于UUID，除了：（a）像URL一样，它可以被解析或解引用到描述主体(subject)的标准资源（[DID Document]()- 参见章节[§ 5。 DID文档]() ），以及（b）与URL不同，DID文档通常包含能够验证DID subject的加密材料。
 
@@ -115,10 +115,10 @@ did:example:123456#oidc
 ## 4.9 Persistence
 DID必须是持久的和不可变的，即一次绑定到subject并永远不会改变（永远）。
 
-理想情况下，DID将是一个完全抽象的分散标识符（如UUID），可以随着时间的推移绑定到多个底层的`` Decentralized Identifier Registries ``，从而保持其持久性独立于任何特定系统。但是，在多个`` Decentralized Identifier Registries``相同的标识符会 引入极其困难的实体和 ``start-of-authority (权限启动)`` （SOA）问题。它还大大增加了开发人员的实现复杂性。
+理想情况下，DID将是一个完全抽象的分布式身份标识符（如UUID），可以随着时间的推移绑定到多个底层的`` Decentralized Identifier Registries ``，从而保持其持久性独立于任何特定系统。但是，在多个`` Decentralized Identifier Registries``相同的标识符会 引入极其困难的实体和 ``start-of-authority (权限启动)`` （SOA）问题。它还大大增加了开发人员的实现复杂性。
 
 为了避免这些问题，建议``DID method ``规范只产生绑定到强大的DID和``DID method ``，稳定分散标识注册(Decentralized Identifier Registries )管理机构随着时间的推移，对DID和``DID method ``的持久性做出最高水平的承诺。
 
 ::: tip
-虽然未包含在此版本中，但此规范的未来版本可能支持DID Document  的 equivID属性，以在多个[ Decentralized Identifier Registry -分散标识符注册表](https://w3c-ccg.github.io/did-spec/#dfn-dir)上表示同一主题的DID之间建立可验证的等效关系。这种等价关系可以产生单个持久抽象DID的实际等价物。见未来工作（第§节） 11。 未来的工作 ）
+虽然未包含在此版本中，但此规范的未来版本可能支持DID Document  的 equivID属性，以在多个[ Decentralized Identifier Registry -分布式身份标识符注册表](https://w3c-ccg.github.io/did-spec/#dfn-dir)上表示同一主题的DID之间建立可验证的等效关系。这种等价关系可以产生单个持久抽象DID的实际等价物。见未来工作（第§节） 11。 未来的工作 ）
 :::

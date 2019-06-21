@@ -7,7 +7,7 @@ JSON-LD 1.0。 Manu Sporny;格雷格凯洛格;马库斯兰塔勒。 W3C。 2014�
 ## C2. 信息参考
 ### [ DID-METHOD-REGISTRY ]()
 
-分散标识符方法注册表。Manu Sporny; 德拉蒙德里德。数字验证社区小组。CG-草案。网址： https： //w3c-ccg.github.io/did-method-registry/
+分布式身份标识符方法注册表。Manu Sporny; 德拉蒙德里德。数字验证社区小组。CG-草案。网址： https： //w3c-ccg.github.io/did-method-registry/
 
 
 ### [ IANA-URI-SCHEMES ]()
