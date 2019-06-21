@@ -1,7 +1,7 @@
 # 与DID相关的W3C-CCG出品的文档
 > 出品并非一定是W3c标准
 
-## [ABNF]()
+## [ABNF](/w3c/abnf/)
 
 
 ## [Linked Data Cryptographic Suite Registry](/w3c/ld-cryptosuite-registry/)

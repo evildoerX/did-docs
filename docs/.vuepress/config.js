@@ -1,8 +1,7 @@
 const { fs, path } = require("@vuepress/shared-utils");
 
 module.exports = ctx => ({
-  dest: "../../vuepress",
-  lang: "en-US",
+  dest: "dist",
   title: "DIDs - Docs",
   description: "Vue-powered Static Site Generator",
   head: [
@@ -35,23 +34,16 @@ module.exports = ctx => ({
     ],
     ["meta", { name: "msapplication-TileColor", content: "#000000" }]
   ],
-  // theme: '@vuepress/vue',
   themeConfig: {
     repo: "vuejs/vuepress",
     editLinks: true,
     docsDir: "packages/docs/docs",
     editLinkText: "在 GitHub 上编辑此页",
     lastUpdated: "上次更新",
-    nav: require("./nav/en"),
+    nav: require("./nav"),
     sidebar: {
-      "/api/": getApiSidebar(),
-      "/guide/": getGuideSidebar("指南", "深入"),
-      "/plugin/": getPluginSidebar(
-        "Plugin",
-        "Introduction",
-        "Official Plugins"
-      ),
-      "/theme/": getThemeSidebar("Theme", "Introduction")
+      "/dids/": getGuideSidebar("指南", "深入"),
+      "/w3c/": getApiSidebar(),
     }
   },
   plugins: [
@@ -91,7 +83,25 @@ module.exports = ctx => ({
 });
 
 function getApiSidebar() {
-  return ["cli", "node"];
+  return [
+    {
+      title: "指南",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        "",
+      ]
+    },
+    {
+      title: "深入",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        'abnf',
+        'ld-cryptosuite-registry'
+      ]
+    }
+  ];
 }
 
 function getGuideSidebar(groupA, groupB) {
@@ -99,11 +109,13 @@ function getGuideSidebar(groupA, groupB) {
     {
       title: groupA,
       collapsable: false,
+      sidebarDepth: 2,
       children: ["Guide"]
     },
     {
       title: groupB,
       collapsable: false,
+      sidebarDepth: 2,
       children: [
         "",
         "Terminology",
@@ -119,51 +131,6 @@ function getGuideSidebar(groupA, groupB) {
         "Registries",
         "RealWorldExample",
         "References"
-      ]
-    }
-  ];
-}
-
-const officalPlugins = fs
-  .readdirSync(path.resolve(__dirname, "../plugin/official"))
-  .map(filename => "official/" + filename.slice(0, -3))
-  .sort();
-
-function getPluginSidebar(pluginTitle, pluginIntro, officialPluginTitle) {
-  return [
-    {
-      title: pluginTitle,
-      collapsable: false,
-      children: [
-        ["", pluginIntro],
-        "using-a-plugin",
-        "writing-a-plugin",
-        "life-cycle",
-        "option-api",
-        "context-api"
-      ]
-    },
-    {
-      title: officialPluginTitle,
-      collapsable: false,
-      children: officalPlugins
-    }
-  ];
-}
-
-function getThemeSidebar(groupA, introductionA) {
-  return [
-    {
-      title: groupA,
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        ["", introductionA],
-        "using-a-theme",
-        "writing-a-theme",
-        "option-api",
-        "default-theme-config",
-        "inheritance"
       ]
     }
   ];
