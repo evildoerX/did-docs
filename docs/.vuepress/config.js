@@ -35,7 +35,7 @@ module.exports = ctx => ({
     ["meta", { name: "msapplication-TileColor", content: "#000000" }]
   ],
   themeConfig: {
-    repo: "vuejs/vuepress",
+    repo: "evildoerX/did-docs",
     editLinks: true,
     docsDir: "packages/docs/docs",
     editLinkText: "在 GitHub 上编辑此页",
