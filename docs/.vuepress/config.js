@@ -3,7 +3,7 @@ const { fs, path } = require("@vuepress/shared-utils");
 module.exports = ctx => ({
   dest: "dist",
   title: "DIDs - Docs",
-  description: "Vue-powered Static Site Generator",
+  description: "Decentralized Identifiers Documents",
   head: [
     ["link", { rel: "icon", href: `/logo.png` }],
     ["link", { rel: "manifest", href: "/manifest.json" }],
@@ -79,7 +79,7 @@ module.exports = ctx => ({
       }
     ]
   ],
-  extraWatchFiles: [".vuepress/nav/en.js", ".vuepress/nav/zh.js"]
+  extraWatchFiles: [".vuepress/nav/index.js"]
 });
 
 function getApiSidebar() {
