@@ -5,13 +5,13 @@ module.exports = ctx => ({
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'VuePress 1.x',
+      title: 'DIDs - Docs',
       description: 'Vue-powered Static Site Generator'
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'VuePress 1.x',
-      description: 'Vue 驱动的静态网站生成器'
+      title: 'DIDs - Docs',
+      description: '去中心化身份标识'
     }
   },
   head: [
@@ -105,14 +105,19 @@ function getGuideSidebar (groupA, groupB) {
       collapsable: false,
       children: [
         '',
-        'getting-started',
-        'directory-structure',
-        'basic-config',
-        'assets',
-        'markdown',
-        'using-vue',
-        'i18n',
-        'deploy',
+        'Terminology',
+        'DataModel',
+        'DecentralizedIdentifiers',
+        'DIDDocuments',
+        'DIDDocumentSyntax',
+        'DIDMethods',
+        'Resolvers',
+        'SecurityConsiderations',
+        'PrivacyConsiderations',
+        'FutureWork',
+        'Registries',
+        'RealWorldExample',
+        'References',
       ]
     },
     {
