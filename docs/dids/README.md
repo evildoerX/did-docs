@@ -57,7 +57,7 @@ did:example:123456789abcdefghi
 ## 1.2 设计目标
 >本节不具有规范性。
 
-DID是大型系统的一个组成部分，例如可验证证书生态系统[VC-DATA-MODEL](https://w3c-ccg.github.io/did-spec/#bib-vc-data-model)，它们推动了该规范的设计目标。本节总结了该规范的主要设计目标
+DID是大型系统的一个组成部分，例如可验证证书生态系统[VC-DATA-MODEL](/dids/References.html#vc-data-model)，它们推动了该规范的设计目标。本节总结了该规范的主要设计目标
 
 | 目标        | 描述           |
 | ------------- |:-------------:|
