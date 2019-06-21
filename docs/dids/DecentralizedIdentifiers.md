@@ -1,10 +1,10 @@
-# 4. Decentralized Identifiers (DIDs)
+# 4. 分布式身份标识符 (DIDs)
 全球唯一的分布式身份标识符(decentralized identifier)的概念并不新鲜; 通用唯一标识符（UUID）最初是在20世纪80年代开发的，后来成为开放软件基金会分布式计算环境的标准功能 。通过使用生成具有足够熵的128位值的算法，UUID在没有集中式注册服务的情况下实现全局唯一性，以使碰撞的机会极小。UUID在[ RFC4122 ](/dids/References.html#rfc4122) 中正式指定为特定类型的统一资源名称（URN）。
 
 DID类似于UUID，除了：（a）像URL一样，它可以被解析或解引用到描述主体(subject)的标准资源（[DID Document]()- 参见章节[§ 5。 DID文档]() ），以及（b）与URL不同，DID文档通常包含能够验证DID subject的加密材料。
 
 
-## 4.1 Generic DID Syntax
+## 4.1 通用DID语法
 通用[ DID scheme ]()是符合[RFC3986](/dids/References.html#rfc3986)的URI scheme。DID scheme专门仅scheme和权威部件(uthority components)而言与DID URI-path-abempty， query和fragment组件是相同的，都是[RFC3986](/dids/References.html#rfc3986)定义的ABNF规则。
 ::: tip
 术语DID仅指符合did下面ABNF中规则的URI 。DID始终标识DID subject。由did-url规则定义的术语DID URL是指URL以DID开头，后跟一个或多个附加组件的。DID URL始终标识要定位的资源。
@@ -30,10 +30,10 @@ param-char         = ALPHA / DIGIT / "." / "-" / "_" / ":" /
 语法目前允许一个为空method-specific-id，例如did:example:将是一个有效的DID，可以识别[DID method](/dids/Terminology.html#did-method)本身
 :::
 
-## 4.2 Method-Specific Syntax 特定于方法的语法
+## 4.2 特定的方法的语法
 [DID method](/dids/Terminology.html#did-method)规范必须通过定义自己的method-name和自己的method-specific-id语法来进一步限制泛型DID语法。见章节[§ 7。 DID方法]() 。
 
-## 4.3 Generic DID Parameter Names 通用DID参数名称
+## 4.3 通用DID参数名称
 DID URL语法支持基于矩阵参数语法（[MATRIX-URIS]()）的参数的简单通用格式。上面的ABNF没有指定任何参数名称（param-name规则）。
 
 一些通用DID参数名称（例如，用于服务选择）完全独立于任何特定[DID method](/dids/Terminology.html#did-method)，并且必须始终以相同方式对所有DIDs起作用。其他（例如，用于版本控制）可能由某些DID方法支持。但必须在那些支持它们的DID方法上统一运行
@@ -49,7 +49,7 @@ DID决议(DID Resolution)中规范指定了这些参数的确切处理规则
 请注意，可能有其他参数或选项不属于DID URL，而是传递给“out of band(带外)”的DID解析程序，例如：使用一个解决方案或一些其他机制。这些选项可以控制高速缓存或一个解决方案所需的格式。这类似于HTTP，其中缓存或结果格式以HTTP Header表达，而不是HTTP URL的一部分。重要的区别是DID参数(DID parameters)作为DID URL一部分的指定了正在识别的资源。然而 不属于DID URL的DID解析程序 控制如何取消引用该资源。
 :::
 
-## 4.4 Method-Specific DID Parameter Names -  Method-Specific DID 参数名称
+## 4.4 特定方法的 DID 参数名称
 [DID method](/dids/Terminology.html#did-method)规范可以指定其他的method-specific参数名称。method-specific 的参数名称必须以``method-name``规则定义的方法名称作为前缀。
 
 例如，如果方法``did:foo:``定义了参数栏，则参数名必须是``foo:bar``。使用此方法和``method-specific``的参数的DID URL示例将是：
