@@ -1,7 +1,8 @@
 const { fs, path } = require("@vuepress/shared-utils");
 
 module.exports = ctx => ({
-  dest: "dist",
+  base:'/did-docs/',
+  dest: "public",
   title: "DIDs - Docs",
   description: "Decentralized Identifiers Documents",
   head: [
