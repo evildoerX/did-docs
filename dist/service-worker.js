@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "e1e39c4c539cd3056343fb16d6f9f318"
+    "revision": "381a345f6bded6be6a9a408036d935d4"
   },
   {
     "url": "assets/css/0.styles.ffd4ce66.css",
@@ -36,12 +36,12 @@ self.__precacheManifest = [
     "revision": "a6094692da31c87a65b87d7fd482dda8"
   },
   {
-    "url": "assets/js/11.253fc343.js",
-    "revision": "45a89cdaa9d7cb310975b6b2d5c5fd5c"
+    "url": "assets/js/11.fe12ced9.js",
+    "revision": "950be8a34398d88a58d9d622221320e7"
   },
   {
-    "url": "assets/js/12.ae284e3d.js",
-    "revision": "0d91b20418bccaebc1cf18953da8d50e"
+    "url": "assets/js/12.9c0cbf3d.js",
+    "revision": "d9714324009749e22809e6c53743a0b5"
   },
   {
     "url": "assets/js/13.664a0aa6.js",
@@ -132,8 +132,8 @@ self.__precacheManifest = [
     "revision": "7c61e800734bed6184fb3f7c62d3585c"
   },
   {
-    "url": "assets/js/app.2d92cd83.js",
-    "revision": "c2fcdb2c43d4970d7e13d840a2629538"
+    "url": "assets/js/app.bbf04da7.js",
+    "revision": "f339b61fd150d733e6069a41555a7548"
   },
   {
     "url": "assets/js/vendors~notification.3948145b.js",
@@ -141,63 +141,63 @@ self.__precacheManifest = [
   },
   {
     "url": "dids/DataModel.html",
-    "revision": "2b7a8253ed01d566e693fb2156e4769c"
+    "revision": "68b0c18a9b456fbe879d5dee9dbae1c3"
   },
   {
     "url": "dids/DecentralizedIdentifiers.html",
-    "revision": "8104af26a4d5860053e7a19c6d988f97"
+    "revision": "da91133e654f84417eae07cd4bd4e999"
   },
   {
     "url": "dids/DIDDocuments.html",
-    "revision": "ebc7ef693648343e4da0cc724b047295"
+    "revision": "667a0a9a44911d0ff23e903efc3baf02"
   },
   {
     "url": "dids/DIDDocumentSyntax.html",
-    "revision": "f6ffe1fbbc77c38ce3fb15b8e783a20d"
+    "revision": "872eca2fb631ab501ac7ed87719d6808"
   },
   {
     "url": "dids/DIDMethods.html",
-    "revision": "42469907a4cfdac72bf9cfdc4dca9466"
+    "revision": "8e0cc82744cd9db2cf58c28bf3f8b735"
   },
   {
     "url": "dids/FutureWork.html",
-    "revision": "0afe091e1aa43f3f247a20439dd670e5"
+    "revision": "d9e79771ea8e513c806db5994561d170"
   },
   {
     "url": "dids/Guide.html",
-    "revision": "9251b8308f33bf2c2c7ab6ad9b6b82ef"
+    "revision": "5f22b41bcf69784c84a25c29f90d73b3"
   },
   {
     "url": "dids/index.html",
-    "revision": "c6b578494f5304123085b7d9e7db6231"
+    "revision": "6b56c5a004a651ca8727b528b7f38874"
   },
   {
     "url": "dids/PrivacyConsiderations.html",
-    "revision": "2286d56a2cf03c45ede4a20f126bf71e"
+    "revision": "9775193e1a43bf0073a48321f45d96bc"
   },
   {
     "url": "dids/RealWorldExample.html",
-    "revision": "70167af6d31a3aeebd7bb25da36563d1"
+    "revision": "51b04d5e8c56c2c76c8d489fa4f5d833"
   },
   {
     "url": "dids/References.html",
-    "revision": "41d8d0e56c5b4cb73f560922ddad5363"
+    "revision": "0f36061466257daa840f19d5f8bb4b78"
   },
   {
     "url": "dids/Registries.html",
-    "revision": "20affb3b8681affae89445058a7aca52"
+    "revision": "5b523c8445d949365fc41534ca6cc6fd"
   },
   {
     "url": "dids/Resolvers.html",
-    "revision": "3ad4bd4a4e0630e8517c44c7015f8434"
+    "revision": "6b028870ddd4da6acc262e7057f8af4a"
   },
   {
     "url": "dids/SecurityConsiderations.html",
-    "revision": "800ff15581c087068dbd72c1d04117df"
+    "revision": "f0e2f9b5859aab02dcba501a5ff85f27"
   },
   {
     "url": "dids/Terminology.html",
-    "revision": "237ea821643559fa13747c9e47a4acd2"
+    "revision": "4f0fe807b9f56e8703d16c215a7a2bdd"
   },
   {
     "url": "hero.png",
@@ -257,7 +257,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "d9faa0084cf241b9606cff5542ea35af"
+    "revision": "280a478ceade47d7aad6f6c397e5efa2"
   },
   {
     "url": "logo.png",
@@ -265,15 +265,15 @@ self.__precacheManifest = [
   },
   {
     "url": "w3c/abnf.html",
-    "revision": "a382e0bad4f38cecf0ec261939d25883"
+    "revision": "f4d9c0f04ac6a537427ef4be12ea8966"
   },
   {
     "url": "w3c/index.html",
-    "revision": "6401b85394ef4c8f7407b94107c0a728"
+    "revision": "66298b3c76fd1267ca664803d2ef17c1"
   },
   {
     "url": "w3c/ld-cryptosuite-registry.html",
-    "revision": "4cf6b94cd688746f46deb8d555e07844"
+    "revision": "1447722d44b15df6c8d7eec35a8036d4"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
