@@ -52,7 +52,7 @@ Christopher Allen，Shannon Appelcline，Kiara Robles，Brian Weller，Betty Dha
 
 敦促在此过程中需要帮助或指导的实施者加入W3C凭证社区小组， 并通过邮件列表请求帮助 。
 
-## 3. 书记官处
+## 3. 已注册规范
 本节总结了社区目前已知的关联数据密钥规范。
 
 ### 3.1 Ed25519Signature2018
