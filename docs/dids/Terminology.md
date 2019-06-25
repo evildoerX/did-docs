@@ -33,11 +33,12 @@ DID URL 的一部分，以并包含第一个正斜杠字符（/）开头。DID�
 
 ### DID Query
 
-DID URL的第一个问号字符（?）后面 的部分。DID路径使用相同的语法作为URI路径。见章节[§ 4.6 查询 ]
+DID URL的第一个问号字符（?）后面 的部分。DID路径使用相同的语法作为URI路径。见章节[§ 4.6 查询 ](/dids/DecentralizedIdentifiers.html#_4-6-query)
 
 ### DID URL
 
 [DID](#did-decentralized-identifier-分布式身份标识符)加上可选的[DID Path](#did-path)，可选?字符后跟[DID query](#did-query)，可选#字符后跟[DID fragment](#did-fragment)。
+
 ### DID Scheme
 
 分布式身份标识符 的正式语法。通用DID方案在本说明书中定义。单独的[DID method](/dids/Terminology.html#did-method)规范定义了与该特定[DID method](/dids/Terminology.html#did-method)一起使用的特定DID方案。

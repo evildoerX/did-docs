@@ -8,7 +8,7 @@ module.exports = [
     link: '/w3c/',
   },
   {
-    text: '其他文章',
-    link: '/others/',
+    text: '中台DID',
+    link: '/idg/',
   },
 ]

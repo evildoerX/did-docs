@@ -44,7 +44,8 @@ module.exports = ctx => ({
     nav: require("./nav"),
     sidebar: {
       "/dids/": getGuideSidebar("指南", "深入"),
-      "/w3c/": getApiSidebar(),
+      "/w3c/": getW3cSidebar(),
+      "/idg/": getIdgSidebar(),
     }
   },
   plugins: [
@@ -83,7 +84,7 @@ module.exports = ctx => ({
   extraWatchFiles: [".vuepress/nav/index.js"]
 });
 
-function getApiSidebar() {
+function getW3cSidebar() {
   return [
     {
       title: "指南",
@@ -102,6 +103,22 @@ function getApiSidebar() {
         'ld-cryptosuite-registry'
       ]
     }
+  ];
+}
+
+function getIdgSidebar (){
+  return [
+    {
+      // title: "指南",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        "",
+        'DIDSystem',
+        'DIDDesign'
+      ]
+    }
+    
   ];
 }
 
