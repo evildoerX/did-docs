@@ -41,8 +41,8 @@ requestAuth：请求验证
 
 ## 3. DID String (DIDs)
 > DIDs Create分为两种方式在生成sercret key过程有不同
-
-### 1. 生成sercret key
+### 3.1 Create DIDs
+#### 1. 生成sercret key
 1. 直接选择一个
 - 随机选择一个secret key（基于实体已有的）
 
@@ -52,7 +52,7 @@ requestAuth：请求验证
 - 将64位hash 拆分为两个32的位s1，s2
 - 使用 ``m/44'/ABT'/S1'/S2'/address_index`` 来生成 HD sercret key
 
-### 2. 选择DID type
+#### 2. 选择DID type
 选择``RoleType``,``KeyType``,``HashType``,DID是 DID string的二进制格式的前两位bytes
 DID Type 由如下三部分组成：
 
@@ -97,38 +97,61 @@ DID Type 由如下三部分组成：
 +-------------+-----------+------------+
 ```
 
-### 3. 获得public key
+#### 3. 获得public key
 使用KeyType对应的方式来讲secret key 转换为 publick key。
 
 例如：``E4852B7091317E3622068E62A5127D1FB0D4AE2FC50213295E10652D2F0ABFC7``
 
-### 4. 获取public key 的Hash
+#### 4. 获取public key 的Hash
 ``EC8E681514753FE5955D3E8B57DAEC9D123E3DB146BDDFC3787163F77F057C27``
 
-### 5. 获取public key hash 的前20 bytes
+#### 5. 获取public key hash 的前20 bytes
 ``EC8E681514753FE5955D3E8B57DAEC9D123E3DB1``
 
-### 6. 在5中获得hash前添加DID Type：``0x0C01 ``
+#### 6. 在5中获得hash前添加DID Type：``0x0C01 ``
 ``0C01EC8E681514753FE5955D3E8B57DAEC9D123E3DB1``
 
-### 7. 获取6中hash的扩展hash
+#### 7. 获取6中hash的扩展hash
 ``42CD815145538F8003586C880AF94418341F9C4B8FA0394876553F8A952C7D03``
 
-### 8. 取7中前4个bytes
+#### 8. 取7中前4个bytes
 ``42CD8151``
 
 
-### 9. 生成二进制的 DID String
+#### 9. 生成二进制的 DID String
 将8得到的4个bytes放到6中得到hash的后边。得到DID String的二进制格式
 ``0C01EC8E681514753FE5955D3E8B57DAEC9D123E3DB142CD8151``
 
-### 10. 加密二进制的DID String
+#### 10. 加密二进制的DID String
 使用 Base58 方法进行二进制的文件编码。完成之后再起前边添加``idg`` 得到DID String
 ``idgNKtCNqYWLYWYW3gWRA1vnRykfCBZYHZvzKr``
 
-### 11 完整的DID String如下
+#### 11 完整的DID String如下
 did:idg:idgNKtCNqYWLYWYW3gWRA1vnRykfCBZYHZvzKr
 
+### 3.2 Request DID Authentication
 
-## 3. DID Document （DIDd）
-### 1. 创建DIDd
+
+### 3.3 Response DID Authentication
+
+## 4. DID Document （DIDd）
+### 4.1. 创建DIDd
+创建DIDs成功之后创建与之对应的DIDd，基础的DIDd格式如下
+
+```json
+{
+  "@context": "https://w3id.org/future-method/v1",
+  "id": "did:example:123456789abcdefghi",
+  "publicKey": [],
+  "authentication": [],
+  "service": []
+}
+```
+### 4.2. Declare DIDd
+创建完成之后会将DIDd 发布到链上
+
+
+### 4.3 Read DIDd
+
+
+### 4.4 Update DIDd
