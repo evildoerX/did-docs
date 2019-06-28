@@ -16,16 +16,63 @@ DID标准："?"分割
 DID标准："#" 分割， 
 
 ## DIDs
-``` json
-Idg-id = "did:idg:" idg-specific-idstring
-idg-specific-idstring = idg-identifier ["|" did-appid][ ";" did-service ] [ "/" did-path ]
-												[ "?" did-query ] [ "#" did-fragment ]
-idg-identifier = 32(base58char)
-base58char     = "1" / "2" / "3" / "4" / "5" / "6" / "7" / "8" / "9" / "A" / "B" / "C"
-               / "D" / "E" / "F" / "G" / "H" / "J" / "K" / "L" / "M" / "N" / "P" / "Q"
-               / "R" / "S" / "T" / "U" / "V" / "W" / "X" / "Y" / "Z" / "a" / "b" / "c"
-               / "d" / "e" / "f" / "g" / "h" / "i" / "j" / "k" / "m" / "n" / "o" / "p"
-               / "q" / "r" / "s" / "t" / "u" / "v" / "w" / "x" / "y" / "z"
+``` js
+// DID Spec:  https://w3c-ccg.github.io/did-spec/#the-generic-did-scheme
+// URI Spec:  https://tools.ietf.org/html/rfc3986
+// ABNF Spec: https://tools.ietf.org/html/rfc5234
+
+did-reference     = did [ "/" did-path ] [ "#" did-fragment ] ["?" did-query] [";" did-service] ["!" idg-service] ["$" idg-appid]
+
+did               = "did:" method ":" specific-idstring
+
+method            = 1*methodchar
+methodchar        = %x61-7A / DIGIT ; 61-7A is a-z in US-ASCII
+
+specific-idstring = idstring *( ":" idstring )
+idstring          = 1*idchar
+idchar            = ALPHA / DIGIT / "." / "-"
+
+// did-path is identical to a URI path and MUST conform to the ABNF of the path-rootless ABNF rule in [RFC3986].
+// https://tools.ietf.org/html/rfc3986#section-3.3
+
+did-path          = segment-nz *( "/" segment )
+
+// did-fragment is identical to a URI fragment and MUST conform to the ABNF of the fragment ABNF rule in [RFC3986]
+// https://tools.ietf.org/html/rfc3986#section-3.5
+
+did-fragment      = *( pchar / "/" )
+
+// did-query is identical to a URI query and MUST conform to the ABNF of the path-rootless ABNF rule in [RFC3986].
+
+did-query         = *(pchar / "?")
+
+// did-service Used to get did document service item and MUST conform to the ABNF of the path-rootless ABNF rule in [RFC3986].
+did-service         = *(pchar / "?")
+
+// idg-service Used to get did document dig service item and MUST conform to the ABNF of the path-rootless ABNF rule in [RFC3986].
+did-service         = *(pchar / "?")
+
+// idg-appid Used to get did document dig appid item and MUST conform to the ABNF of the path-rootless ABNF rule in [RFC3986].
+idg-appid         = *(pchar / "?")
+
+segment           = *pchar
+segment-nz        = 1*pchar
+
+pchar             = unreserved / pct-encoded
+
+unreserved        = ALPHA / DIGIT / "-" / "." / "_" / "~"
+
+pct-encoded       = "%" HEXDIG HEXDIG
+
+// https://tools.ietf.org/html/rfc5234
+// ALPHA           =  %x41-5A / %x61-7A
+// HEXDIG          =  DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
+// DIGIT           =  %x30-39
+
+// http://www.columbia.edu/kermit/ascii.html
+// 41-5A is big letters A-Z in US-ASCII
+// 61-7A is small letters a-z in US-ASCII
+// 30-39 is digits 0-9 in US-ASCII
 ```
 
 ## DID Document
