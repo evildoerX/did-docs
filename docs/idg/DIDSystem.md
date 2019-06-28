@@ -35,12 +35,12 @@ DID 核心模块与链直接沟通，对外暴露为API或者SDK，提供DID创�
 ### 3.2 issuer
 > Holder向issuer注册其did，并获取对应的service endpoint 和 Claims。并提交更新相应的DID Document。关于更新有个问题：就是did document 的更新是谁发起的。 如果是服务方发起的 那么就需要did进行签名认证。如果是服务方到did 有did发起则直接认证。
 
-1. holder直接更新
+1. 方式一：holder直接更新
 ![](./d3.png)
 
 
 
-2. holder 签名更新
+2. 方式二：holder 签名更新
 ![](./d4.png)
 
 ### 3.3 Verifier
