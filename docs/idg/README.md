@@ -1,6 +1,6 @@
 # DID 设计
 ## 术语
-### did
+### did(DID String)
 去中心化身份标识符
 ### did-url
 基于去中心化身份标识符的去中心化资源标识
@@ -15,13 +15,13 @@ DID标准："?"分割
 ### did-fragment 
 DID标准："#" 分割， 
 
-## DIDs
+## DID String
 ``` js
 // DID Spec:  https://w3c-ccg.github.io/did-spec/#the-generic-did-scheme
 // URI Spec:  https://tools.ietf.org/html/rfc3986
 // ABNF Spec: https://tools.ietf.org/html/rfc5234
 
-did-reference     = did [ "/" did-path ] [ "#" did-fragment ] ["?" did-query] [";" did-service] ["!" idg-service] ["$" idg-appid]
+did-url     = did [ "/" did-path ] [ "#" did-fragment ] ["?" did-query] [";" did-service] ["!" idg-service] ["$" idg-appid]
 
 did               = "did:" method ":" specific-idstring
 

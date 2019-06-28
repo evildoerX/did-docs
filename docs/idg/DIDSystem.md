@@ -6,11 +6,20 @@ DID 持有者，用于存储用户的的did，其实体可以是钱包，也可�
 ### 1.2 DID Resolvers 
 DID 核心模块与链直接沟通，对外暴露为API或者SDK，提供DID创建，DID加密/解密，DID Document的创建，发布，读取，更新，停用。类似于DNS的作用。
 
-### 1.3 Claims Issuer 和 Service Providers
+### 1.3 Claims Issuer
+::: tip
+当 Claims Issuer 对外提供服务时，其兼顾Service Providers的角色
+:::
 证书发行方，为 Holder提供各种各样的证书以及对应的服务。可以是政府机构，公司，组织等。
 
-### 1.4 Verifier 和 Service Providers
+### 1.4 Verifier
+::: tip
+当 Verifier 对外提供服务时，其兼顾Service Providers的角色
+:::
 证书验证方和服务提供方，主要用于验证holder的相关信息，同事提供服务。可以是网站，app，平台等。
+
+### 1.5 Service Providers
+服务提供方，提供相关服务
 
 
 ## 2. 系统结构
@@ -28,6 +37,8 @@ DID 核心模块与链直接沟通，对外暴露为API或者SDK，提供DID创�
 
 1. holder直接更新
 ![](./d3.png)
+
+
 
 2. holder 签名更新
 ![](./d4.png)
