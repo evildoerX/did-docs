@@ -138,7 +138,7 @@ did:idg:idgNKtCNqYWLYWYW3gWRA1vnRykfCBZYHZvzKr
 
 ## 4. DID Document （DIDd）
 ### 4.1. 创建DIDd
-创建DIDs成功之后创建与之对应的DIDd，基础的DIDd格式如下
+创建DIDs成功之后创建与之对应的DIDd，基础的DIDd格式如下。
 
 ```json
 {
@@ -149,11 +149,15 @@ did:idg:idgNKtCNqYWLYWYW3gWRA1vnRykfCBZYHZvzKr
   "service": []
 }
 ```
+::: tip
+1. 首次创建did 需要存入did 和did签名对应的公钥
+:::
 ### 4.2. Declare DIDd
 创建完成之后会将DIDd 发布到链上
 
 
 ### 4.3 Read DIDd
-
+用户使用私钥签名did，DID Resolvers 使用did document 的公钥进行认证。
 
 ### 4.4 Update DIDd
+关于更新有个问题：就是did document 的更新是谁发起的。 如果是服务方发起的 那么就需要did进行签名认证。如果是服务方到did 有did发起则直接认证。
