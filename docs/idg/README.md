@@ -1,9 +1,13 @@
-# DID 设计
+# DID String 设计
 ## 术语
-### did(DID String)
+### DID String(did)
 去中心化身份标识符
 ### did-url
 基于去中心化身份标识符的去中心化资源标识
+### did
+不包含参数的身份标识字符串
+### method
+did method 在中台的方法名称
 ### did-appid
 中台的App_id，以"|"分割，自定义字段
 ### did-service
@@ -15,7 +19,7 @@ DID标准："?"分割
 ### did-fragment 
 DID标准："#" 分割， 
 
-## DID String
+## DID String Format
 ``` js
 // DID Spec:  https://w3c-ccg.github.io/did-spec/#the-generic-did-scheme
 // URI Spec:  https://tools.ietf.org/html/rfc3986
