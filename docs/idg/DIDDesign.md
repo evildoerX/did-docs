@@ -3,12 +3,14 @@
 > 参考abt以及其他did methods的依赖库调研准备对应的加密算法的go依赖库
 ```json
 1. crypto/rand  // 密码安全的伪随机数生成器
-2. crypto/sha256 // 实现 FIPS 180-4 中定义的 SHA224 和 SHA256 哈希算法。
 3. crypto/ecdsa // 使用 FIPS 186-3 中定义的椭圆曲线数字签名算法
 4. crypto/elliptic // 椭圆包实现了在素数域上的几个标准椭圆曲线
 5. golang.org/x/crypto/ed25519  //ed25519签名算法
-6. github.com/btcsuite/btcutil/base58 //base58编码
+6. github.com/btcsuite/btcutil/base58 
 7. encoding/hex // 实现十六进制编码和解码
+8. encoding/binary // 二进制编码和解码
+9. golang.org/x/crypto/sha3 // sha3
+10. github.com/mr-tron/base58 //base58编码
 ```
 
 ## 2. deeplink 设计
