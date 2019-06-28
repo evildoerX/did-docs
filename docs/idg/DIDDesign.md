@@ -160,4 +160,3 @@ did:idg:idgNKtCNqYWLYWYW3gWRA1vnRykfCBZYHZvzKr
 用户使用私钥签名did，DID Resolvers 使用did document 的公钥进行认证。
 
 ### 4.4 Update DIDd
-关于更新有个问题：就是did document 的更新是谁发起的。 如果是服务方发起的 那么就需要did进行签名认证。如果是服务方到did 有did发起则直接认证。
