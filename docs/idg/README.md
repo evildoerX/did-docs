@@ -47,13 +47,13 @@ did-fragment      = *( pchar / "/" )
 did-query         = *(pchar / "?")
 
 // did-service Used to get did document service item and MUST conform to the ABNF of the path-rootless ABNF rule in [RFC3986].
-did-service         = *(pchar / "?")
+did-service         = *(pchar / ";")
 
 // idg-service Used to get did document dig service item and MUST conform to the ABNF of the path-rootless ABNF rule in [RFC3986].
-did-service         = *(pchar / "?")
+idg-service         = *(pchar / "!")
 
 // idg-appid Used to get did document dig appid item and MUST conform to the ABNF of the path-rootless ABNF rule in [RFC3986].
-idg-appid         = *(pchar / "?")
+idg-appid         = *(pchar / "$")
 
 segment           = *pchar
 segment-nz        = 1*pchar
